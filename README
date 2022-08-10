@@ -1,0 +1,19 @@
+/*Koning Yannick 312CB*/
+Am facut fileuri-le. am scanat D si C, initializez cozile si threaduri-le.
+Citesc comenzile.
+Pentru add avem comanda care merge invers in functie de num de task-uri si
+cauta in vectorul de id-uri un id. 
+Pentru get_task cautam prin fiecare coada in ordinea ceruta si cand il gasim
+iesim din functie.
+Pentru get_thread merg prin coada de run si il caut. Daca nu il gasesc punem
+alt mesaj
+Pentru printari folosim cam aceeasi functie in care parcurgem toata coada si
+printam fiecare element. In acelasi timp inseram si intr-o coada auxiliara
+si o concatenam la sfarsit.
+Pentru run verificam daca timpul este mai mare decat D. Daca da il vom rula
+de cate ori este nevoie. La fiecare apel returnam timpul total, pe care il
+verificam daca este cel maxim. 
+Punem cate task-uri putem pe running queue. Le rulam pe toate, daca timpul 
+a expirat le punem in finished queue si eliberam id-ul, daca nu doar
+reducem timpul. In acelasi timp verificam si timpul maxim. La sfarsit punem
+din nou taskuri pe queue.
